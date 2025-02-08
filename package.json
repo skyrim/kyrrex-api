@@ -1,0 +1,22 @@
+{
+  "name": "kyrrex-api",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "type": "module",
+  "files": [
+    "./src/*"
+  ],
+  "keywords": [
+    "kyrrex",
+    "krrx",
+    "api",
+    "rest",
+    "client"
+  ],
+  "author": "Stefan Stojković",
+  "license": "MIT",
+  "description": "Convenient access to the Kyrrex REST API",
+  "dependencies": {
+    "undici": "^6.21.1"
+  }
+}
