@@ -1,6 +1,13 @@
 import { kyrrexApiRequest } from './request.js'
 
 export class KyrrexApi {
+  /**
+   * [Authentication](https://docs.kyrrex.com/authentication)
+   * 
+   * @param {Object} params
+   * @param {string} params.publicKey Public API key
+   * @param {string} params.secretKey Private API key
+   */
   constructor(params) {
     this.publicKey = params.publicKey
     this.secretKey = params.secretKey
