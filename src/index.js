@@ -165,8 +165,8 @@ export class KyrrexApi {
    * @param {string=} params.sort_by Sort by specific field
    * @returns {Promise<any>}
    */
-  getTransactions(params) {
-    return this.request('GET', '/api/v2/transactions', params)
+  getDepositTransactions(params) {
+    return this.request('GET', '/api/v2/transactions/deposits', params)
   }
 
   /**
