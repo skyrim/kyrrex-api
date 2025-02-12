@@ -25,9 +25,9 @@ function flattenObject(obj, parentKey = '', res = {}) {
 function generateApiSign(method, endpoint, data, secretKey) {
   let content = ''
   if (method === 'GET') {
-    const query = data || []
-    query.sort((a, b) => a.key.localeCompare(b.key))
-    content = query.map((param) => `${param.key}=${param.value}`).join('&')
+    const query = data && typeof data === 'object' ? Object.entries(data) : []
+    query.sort(([a], [b]) => a.localeCompare(b))
+    content = query.map(([key, value]) => `${key}=${value}`).join('&')
   } else if (['POST', 'PUT', 'PATCH', 'DELETE'].includes(method)) {
     const body = data || {}
     content = objectToQueryString(body)
