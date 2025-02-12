@@ -59,7 +59,7 @@ export async function kyrrexApiRequest(method, endpoint, data, auth = {}) {
     requestParams.body = JSON.stringify(data)
   }
 
-  const response = await request(`${url}${endpoint}`, requestParams)
+  const response = await request(requestUrl, requestParams)
 
   if (response.headers['content-type'].indexOf('application/json') > -1) {
     return response.body.json()
